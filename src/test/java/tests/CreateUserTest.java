@@ -1,26 +1,20 @@
-package API.tests;
+package tests;
 
-import API.dto.CreateUserRequest;
-import API.dto.ErrorMessageResponse;
-import API.dto.UnsuccessfulUserCreateRequest;
-import API.dto.User;
+import dto.CreateUserRequest;
+import dto.ErrorMessageResponse;
+import dto.UnsuccessfulUserCreateRequest;
+import dto.User;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 public class CreateUserTest extends ApiBaseTest{
 
-//    @After
-//    public void setUp(){
-//        Response responseDelete = deleteRequest(endpointDelete+requestBody.getEmail() ,200);
-//    }
     String endpoint = "/users";
-
     String endpointDelete = "/users/";
 
 

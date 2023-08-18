@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdf8f02-17de-43e0-9fbc-8483ca8d47f1" name="Changes" comment="" />
+    <list default="true" id="abdf8f02-17de-43e0-9fbc-8483ca8d47f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/CreateUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/ErrorMessageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/UnsuccessfulUserCreateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ApiBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CreateUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DeleteUserTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +26,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2U6YyT4P4UtDwxalzepqnH3Hhev" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -22,9 +39,92 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/Users/PC/IdeaProjects/nocode-project-API/src/test/java",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/nocode-project-API/src/test/java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\IdeaProjects\nocode-project-API\src\test\java" />
+      <recent name="C:\Users\PC\IdeaProjects\nocode-project-API\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DeleteUserTest.deleteNonExistentUser">
+    <configuration name="CreateUserTest.successfulCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nocode-project-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CreateUserTest" />
+      <option name="METHOD_NAME" value="successfulCreateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteUserTest.deleteNonExistentUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nocode-project-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DeleteUserTest" />
+      <option name="METHOD_NAME" value="deleteNonExistentUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteUserTest.successDeleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nocode-project-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DeleteUserTest" />
+      <option name="METHOD_NAME" value="successDeleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteUserTest.successDeleteUserWithBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nocode-project-API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DeleteUserTest" />
+      <option name="METHOD_NAME" value="successDeleteUserWithBuilder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DeleteUserTest.deleteNonExistentUser" />
+        <item itemvalue="JUnit.DeleteUserTest.successDeleteUserWithBuilder" />
+        <item itemvalue="JUnit.DeleteUserTest.successDeleteUser" />
+        <item itemvalue="JUnit.CreateUserTest.successfulCreateUser" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

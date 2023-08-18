@@ -1,12 +1,13 @@
-package API.tests;
+package tests;
 
-import API.dto.CreateUserRequest;
-import API.dto.ErrorMessageResponse;
-import API.dto.User;
+import dto.CreateUserRequest;
+import dto.ErrorMessageResponse;
+import dto.User;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.assertEquals;
+import org.testng.Assert;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -14,20 +15,18 @@ public class DeleteUserTest extends ApiBaseTest {
 
     String endpointDelete = "/users/";
     String endpointCreate = "/users";
-    String email = "hkkdsddffdsdasjh@gmail.com";
 
 
     @Test
     public void successDeleteUserWithBuilder() {
         CreateUserRequest requestBody = CreateUserRequest.builder()
-                .email(email)
+                .email(generateRandomEmail())
                 .full_name(fullName)
                 .password(password)
                 .generate_magic_link(false)
                 .build();
         Response createResponse = postRequest(endpointCreate, 201, requestBody);
-        Response deleteResponse = deleteRequest(endpointDelete + email, 200);
-        //Кас сделать проверку сравнения созданного имэйла с удаленным (что они одинаковы)
+        Response deleteResponse = deleteRequest(endpointDelete + requestBody.getEmail(), 200);
     }
 
     @Test
@@ -44,8 +43,8 @@ public class DeleteUserTest extends ApiBaseTest {
         CreateUserRequest requestBody = new CreateUserRequest(fullName, generateRandomEmail(), password, false);
         User response = postRequest(endpointCreate, 201, requestBody)
                 .body().jsonPath().getObject("", User.class);
-        Response responseDelete = deleteRequest(endpointDelete+requestBody.getEmail() ,200);
-        ErrorMessageResponse responseDeleteDeleted = deleteRequest(endpointDelete+requestBody.getEmail(), 404)
+        Response responseDelete = deleteRequest(endpointDelete + requestBody.getEmail() ,200);
+        ErrorMessageResponse responseDeleteDeleted = deleteRequest(endpointDelete + requestBody.getEmail(), 404)
                 .body().jsonPath().getObject("", ErrorMessageResponse.class);
         assertEquals(requestBody.getEmail(), response.getEmail());   //Не уверен что это проверяет удаленный с еще раз удаленным мылом
         Assert.assertEquals("Not Found", responseDeleteDeleted.getCode());
@@ -57,10 +56,17 @@ public class DeleteUserTest extends ApiBaseTest {
         CreateUserRequest requestBody = new CreateUserRequest(fullName, generateRandomEmail(), password, false);
         User response = postRequest(endpointCreate, 201, requestBody)
                 .body().jsonPath().getObject("", User.class);
-        ErrorMessageResponse responseDelete = getRequest(endpointDelete+requestBody.getEmail() ,400)
+        ErrorMessageResponse responseDelete = getRequest(endpointDelete + requestBody.getEmail() ,400)
                 .body().jsonPath().getObject("", ErrorMessageResponse.class);
         assertEquals("Bad Request", responseDelete.getCode());
         assertEquals("Something went wrong, please try again.", responseDelete.getMessage());
     }
+
+    @Test
+    public void deleteNonExistentUser() {
+        ErrorMessageResponse responseDelete = deleteRequest(endpointDelete + generateRandomEmail() ,404)
+                .body().jsonPath().getObject("", ErrorMessageResponse.class);
+        assertEquals("Not Found", responseDelete.getCode());
+        assertTrue(responseDelete.getMessage().contains("not found"));
+    }
 }
-//удалит не верного
