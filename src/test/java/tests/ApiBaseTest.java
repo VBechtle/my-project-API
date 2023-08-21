@@ -11,7 +11,7 @@ import java.util.UUID;
 public class ApiBaseTest {
     final static String BASE_URI = "https://studio-api.softr.io/v1/api";
     final static String API_KEY = "khIbAyJIU5CIuh1oDuBRx1s49";
-    final static String DOMAIN = "jere237.softr.app";
+    final static String DOMAIN = "erich416.softr.app";
 
     String fullName = "Vladimir";
     String password = "123456";
